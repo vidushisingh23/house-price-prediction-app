@@ -14,7 +14,7 @@ test_path = 'data/test.csv'
 
 # Check for dataset
 if not os.path.exists(train_path) or not os.path.exists(test_path):
-    print("❌ Please download 'train.csv' and 'test.csv' from Kaggle and place them in the 'data/' folder.")
+    print("Please download 'train.csv' and 'test.csv' from Kaggle and place them in the 'data/' folder.")
     exit()
 
 # Load data
@@ -77,8 +77,8 @@ y_pred = model.predict(X_val)
 mse = mean_squared_error(y_val, y_pred)
 r2 = r2_score(y_val, y_pred)
 
-print(f"✅ Validation MSE: {mse:.2f}")
-print(f"✅ R² Score: {r2:.2f}")
+print(f"Validation MSE: {mse:.2f}")
+print(f" R² Score: {r2:.2f}")
 
 # Save model, scaler, features
 os.makedirs("model", exist_ok=True)
@@ -91,4 +91,4 @@ with open("model/scaler.pkl", "wb") as f:
 with open("model/features.pkl", "wb") as f:
     pickle.dump(features, f)
 
-print("✅ Artifacts saved in /model")
+print("Artifacts saved in /model")

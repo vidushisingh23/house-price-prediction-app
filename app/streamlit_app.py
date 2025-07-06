@@ -118,7 +118,7 @@ def main():
     st.success(f"Predicted House Price: ${np.round(price, 2):,.0f}")
 
     # Show coefficients (since it's LinearRegression)
-    st.subheader("🔍 Model Explanation")
+    st.subheader("Model Explanation")
     st.markdown("See which features influenced the prediction the most:")
     explain_with_coefficients(model, features)
 
